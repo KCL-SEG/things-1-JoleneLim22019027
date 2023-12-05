@@ -7,7 +7,7 @@ class Thing(models.Model):
    description = models.TextField(max_length=120, unique=False, blank=True)
    quantity = models.IntegerField(
       validators=[
-         MinValueValidator(0, message="Value must be greater than or equal to 0"),
-         MaxValueValidator(100, message="Value must be lesser than or equal to 100")
+         MinValueValidator(0),
+         MaxValueValidator(100)
       ]
    )
